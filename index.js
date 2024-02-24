@@ -5,7 +5,7 @@ let SHEET_RANGE = 'A1:Z1000';  // Ajusta esto según el tamaño de tus datos
 let FULL_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE}&tqx=responseHandler:handleResponse`;
 
 // Agregar una función de manejo de respuesta para JSONP
-window.handleResponse = function(response) {
+window.handleResponse = function( response) {
     if (!response.table || !response.table.cols || !response.table.rows) {
         console.error('La respuesta de la API no tiene el formato esperado.');
         return;
