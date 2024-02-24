@@ -1,0 +1,148 @@
+.home-blog-area.section-padding2 {
+    padding-bottom: 35px;
+}
+.our-services.servic-padding{
+    padding-top: 40px;
+}
+.logo{
+    max-width:10rem;
+}
+/* Estilos de about */
+.preloader .preloader-img {
+    padding-top: 0px;
+}
+.preloader .preloader-img img {
+    max-width: 100px;
+}
+
+.favourite-place .single-place .place-img img {
+    max-height: 253px;
+}
+.title-rework{
+    text-align: center;
+    align-items: center;
+}
+
+.footer-social-footer{
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    filter: invert(1);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción de aspecto 16:9 (500/1200) */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.row-x{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.opiniones .caja-contenedor .caja {
+    background: white;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    border: 1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+}
+
+.opiniones .caja-contenedor .caja .user img {
+    border-radius: 50%;
+    object-fit: cover;
+  
+}
+.opiniones .caja-contenedor .caja .user h3 {
+color: black;
+font-size: 4rem;
+}
+/**slider start**/
+.title-2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.slider-box {
+    width: 100%;
+    max-width: 75rem;
+    height: auto;
+    margin: 5rem auto 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-list {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 15s infinite alternate ease-in-out;
+}
+
+.slider-list li {
+    width: 35%; /* Cada imagen ocupa el 30% del contenedor */
+    list-style: none;
+    position: relative;
+    height: 600px; /* Altura fija para las imágenes */
+}
+
+.texto {
+    position: absolute;
+    text-align: center;
+    padding: 0 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+}
+
+.texto h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.slider-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { margin-left: 0; }
+    25% { margin-left: 0; }
+    30% { margin-left: -100%; }
+    55% { margin-left: -100%; }
+    60% { margin-left: -200%; }
+    85% { margin-left: -200%; }
+    90% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+}
+
+
+/**paquetes**/
+.contenedor {
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+} 
