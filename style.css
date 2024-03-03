@@ -59,6 +59,7 @@
 }
 
 .opiniones .caja-contenedor .caja {
+    font-family: "Roboto", sans-serif;
     background: white;
     margin: 1rem;
     padding: 1rem;
@@ -69,7 +70,10 @@
     flex: 1 1 30rem;
     border-radius: .5rem;
 }
-
+.heading{
+    font-family: "Roboto", sans-serif;
+text-align: center;
+}
 .opiniones .caja-contenedor .caja .user img {
     border-radius: 50%;
     object-fit: cover;
@@ -85,7 +89,14 @@ font-size: 4rem;
     font-size: 2rem;
     padding-top: 1rem;
 }
-
+/* }imagen-gradient */
+.h3 {
+    background: url(https://th.bing.com/th/id/R.31565849f6ced1a8b51eb6d9cc460388?rik=Pa47awAw7LOEqg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-JG-6kr8vMP4%2fTdJUr_izn8I%2fAAAAAAAAHmk%2fC7McFH43btQ%2fs1600%2fgreen_lime-1920x1200-hd-wallpaper.jpg&ehk=xSrt7YuANsCFyUQS5QUSagtsOKxO5vG1SLqe8zMEVj0%3d&risl=&pid=ImgRaw&r=0) center/cover no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  /* imagen finaliza gradient */
+  
 .slider-box {
     width: 100%;
     max-width: 75rem;
@@ -146,8 +157,116 @@ font-size: 4rem;
 
 
 /**paquetes**/
-.contenedor {
-    display: flex;
-    align-items: center;
-    padding: 5rem;
-} 
+.pasadias-text {
+    display: inline-block;
+    margin: 10rem;
+}
+
+@media (max-width: 767px) {
+    .pasadias-text {
+        margin: 0; /* Elimina el margen en dispositivos móviles y tablets */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Puedes agregar estilos adicionales para tablets si es necesario */
+    .pasadias-text {
+        margin: 0; /* Elimina el margen en tablets */
+    }
+}
+
+@media (min-width: 992px) {
+    .pasadias-text {
+        margin: 10rem; /* Restaura el margen de 10rem en computadoras */
+    }
+}
+
+
+
+/**titulos de los terminos y  condiciones**/
+.textos-importantes{
+font-family: "Roboto", sans-serif;
+text-align: center;
+color: #333333;
+font-size: 1.3rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.textos-importantes p {
+    color: #333333;
+    font-size: 1.3rem;
+}
+.imagen-importante{
+    max-width: 30%;
+    height: auto;
+}
+/* tabla penalidades */
+.tabla-penalidades {
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    overflow-x: auto; /* Añadir desplazamiento horizontal en pantallas pequeñas */
+  }
+  
+  .tabla-penalidades table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabla-penalidades th,
+  .tabla-penalidades td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Media queries para hacer la tabla responsive */
+  
+  /* Para tablets en modo horizontal y computadoras */
+  @media (min-width: 768px) {
+    .tabla-penalidades th,
+    .tabla-penalidades td {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* Para tablets en modo vertical y dispositivos móviles */
+  @media (max-width: 767px) {
+    .tabla-penalidades th,
+    .tabla-penalidades td {
+      font-size: 1rem;
+    }
+  }
+  
+  /* tabla penalidades finaliza */
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  td {
+    font-size: 14px;
+  }
+  
+  
