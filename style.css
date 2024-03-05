@@ -3,6 +3,7 @@
 }
 .our-services.servic-padding{
     padding-top: 40px;
+    padding-bottom: 2rem;
 }
 .logo{
     max-width:10rem;
@@ -91,15 +92,17 @@ font-size: 4rem;
 }
 /* }imagen-gradient */
 .h3 {
-    background: url(https://th.bing.com/th/id/R.31565849f6ced1a8b51eb6d9cc460388?rik=Pa47awAw7LOEqg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-JG-6kr8vMP4%2fTdJUr_izn8I%2fAAAAAAAAHmk%2fC7McFH43btQ%2fs1600%2fgreen_lime-1920x1200-hd-wallpaper.jpg&ehk=xSrt7YuANsCFyUQS5QUSagtsOKxO5vG1SLqe8zMEVj0%3d&risl=&pid=ImgRaw&r=0) center/cover no-repeat;
+    background: url(https://wallpaperset.com/w/full/e/7/0/35040.jpg) center/cover no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
   }
   /* imagen finaliza gradient */
-  
-.slider-box {
+  .slider-box {
     width: 100%;
-    max-width: 75rem;
+    max-width: 100%;
     height: auto;
     margin: 5rem auto 0;
     overflow: hidden;
@@ -109,15 +112,16 @@ font-size: 4rem;
 .slider-list {
     display: flex;
     padding: 0;
-    width: 400%;
+    width: 400%; /* Esto es para 4 imágenes, si tienes más puedes ajustar */
     animation: slide 15s infinite alternate ease-in-out;
 }
 
 .slider-list li {
-    width: 35%; /* Cada imagen ocupa el 30% del contenedor */
+    width: 25%; /* Cada imagen ocupa el 100% del contenedor */
     list-style: none;
     position: relative;
-    height: 600px; /* Altura fija para las imágenes */
+    height: auto; /* Altura automática para las imágenes */
+    text-align: center;
 }
 
 .texto {
@@ -129,7 +133,8 @@ font-size: 4rem;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 400px;
+    max-width: 90%; /* Ajusta este valor según tus necesidades */
+    margin: 0 auto;
 }
 
 .texto h2 {
@@ -139,27 +144,54 @@ font-size: 4rem;
 }
 
 .slider-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 70%;
+    height: 70%;
 }
 
-@keyframes slide {
-    0% { margin-left: 0; }
-    25% { margin-left: 0; }
-    30% { margin-left: -100%; }
-    55% { margin-left: -100%; }
-    60% { margin-left: -200%; }
-    85% { margin-left: -200%; }
-    90% { margin-left: -300%; }
-    100% { margin-left: -300%; }
+@media (max-width: 767px) { 
+    .slider-box img {
+        width: 100%;
+        height: 100%;
+    }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .slider-box img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(0%); }
+    30% { transform: translateX(-25%); }
+    55% { transform: translateX(-25%); }
+    60% { transform: translateX(-50%); }
+    85% { transform: translateX(-50%); }
+    90% { transform: translateX(-75%); }
+    100% { transform: translateX(-75%); }
+}
+
 
 
 /**paquetes**/
+.text-packages{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.slider-height3{
+    min-height: 600px;
+}
 .pasadias-text {
     display: inline-block;
     margin: 10rem;
+    padding: 0px;
 }
 
 @media (max-width: 767px) {

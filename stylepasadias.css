@@ -7,7 +7,7 @@
 
 .container-faq {
   box-shadow: 0 0 15 -1px rgba(0, 0, 0, .1);
-  padding: 1rem;
+  padding: 6rem;
 }
 
 .container-faq .title-faq {
@@ -27,7 +27,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, rgba(0, 151, 15, 65.718), rgba(0, 321, 0, 138.718));
+  background: limegreen;
+
 
   padding: 2rem 2rem 2rem 10rem;
   transition: .4s;
@@ -73,6 +74,9 @@
 .container-faq .item-faq .answer p {
   font-size: 1.3rem;
 }
+.secciondepaqute{
+  margin-top: -20px; /* Mueve el section hacia arriba con un valor negativo */
+}
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
@@ -84,6 +88,9 @@
     width: 3rem;
     height: 3rem;
     font-size: 0.8rem;
+  }
+  .container-faq{
+    padding: 1rem;
   }
 
   .container-faq .item-faq .question span {
@@ -109,6 +116,9 @@
     height: 2.2rem;
     font-size: 0.7rem;
   }
+  .container-faq{
+    padding: 1rem;
+  }
 
   .container-faq .item-faq .question span {
     font-size: 1.8rem;
@@ -126,4 +136,25 @@
 /* actividades de pasadias */
 .important-actividades{
   text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 0px;
+}
+
+/* tamaños imagenes */
+.tamaño-emojis{
+  width: 1px;
+  height: 1px;
+}
+
+/* tamaño de el texto */
+.text-helou{
+  font-size:20px;  
+}
+.text-black{
+  color: black;
+  text-align: center;
+}
+
+.icono {
+  margin-right: 15px; /* Ajusta el valor según necesites */
 }
