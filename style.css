@@ -92,6 +92,7 @@ font-size: 4rem;
 }
 /* }imagen-gradient */
 .h3 {
+<<<<<<< HEAD
     background: url(https://wallpaperset.com/w/full/e/7/0/35040.jpg) center/cover no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -101,6 +102,15 @@ font-size: 4rem;
   }
   /* imagen finaliza gradient */
   .slider-box {
+=======
+    background: url(https://th.bing.com/th/id/R.31565849f6ced1a8b51eb6d9cc460388?rik=Pa47awAw7LOEqg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-JG-6kr8vMP4%2fTdJUr_izn8I%2fAAAAAAAAHmk%2fC7McFH43btQ%2fs1600%2fgreen_lime-1920x1200-hd-wallpaper.jpg&ehk=xSrt7YuANsCFyUQS5QUSagtsOKxO5vG1SLqe8zMEVj0%3d&risl=&pid=ImgRaw&r=0) center/cover no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  /* imagen finaliza gradient */
+  
+.slider-box {
+>>>>>>> 1822097caa1bc726d926537d3f61a9635f2a6af9
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -178,6 +188,7 @@ font-size: 4rem;
 
 
 /**paquetes**/
+<<<<<<< HEAD
 .text-packages{
     color: #fff;
     font-size: 50px;
@@ -192,6 +203,11 @@ font-size: 4rem;
     display: inline-block;
     margin: 10rem;
     padding: 0px;
+=======
+.pasadias-text {
+    display: inline-block;
+    margin: 10rem;
+>>>>>>> 1822097caa1bc726d926537d3f61a9635f2a6af9
 }
 
 @media (max-width: 767px) {
@@ -230,6 +246,7 @@ align-items: center;
     font-size: 1.3rem;
 }
 .imagen-importante{
+<<<<<<< HEAD
     max-width: 30%;
     height: auto;
 }
@@ -273,6 +290,17 @@ align-items: center;
   
   /* tabla penalidades finaliza */
   
+=======
+    width: 10rem;
+    height: 10rem;
+}
+.tabla-penalidades {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+  }
+  
+>>>>>>> 1822097caa1bc726d926537d3f61a9635f2a6af9
   table {
     width: 100%;
     border-collapse: collapse;

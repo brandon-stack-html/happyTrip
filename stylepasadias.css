@@ -7,7 +7,11 @@
 
 .container-faq {
   box-shadow: 0 0 15 -1px rgba(0, 0, 0, .1);
+<<<<<<< HEAD
   padding: 6rem;
+=======
+  padding: 1rem;
+>>>>>>> 1822097caa1bc726d926537d3f61a9635f2a6af9
 }
 
 .container-faq .title-faq {
@@ -27,8 +31,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   background: limegreen;
 
+=======
+  background: linear-gradient(to right, rgba(0, 151, 15, 65.718), rgba(0, 321, 0, 138.718));
+>>>>>>> 1822097caa1bc726d926537d3f61a9635f2a6af9
 
   padding: 2rem 2rem 2rem 10rem;
   transition: .4s;
@@ -74,9 +82,12 @@
 .container-faq .item-faq .answer p {
   font-size: 1.3rem;
 }
+<<<<<<< HEAD
 .secciondepaqute{
   margin-top: -20px; /* Mueve el section hacia arriba con un valor negativo */
 }
+=======
+>>>>>>> 1822097caa1bc726d926537d3f61a9635f2a6af9
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
@@ -89,6 +100,7 @@
     height: 3rem;
     font-size: 0.8rem;
   }
+<<<<<<< HEAD
   .container-faq{
     padding: 1rem;
   }
@@ -128,6 +140,41 @@
     padding: 0 15px;
   }
 
+=======
+
+  .container-faq .item-faq .question span {
+    font-size: 2rem;
+  }
+
+  .container-faq .item-faq .answer {
+    padding: 0 2rem;
+  }
+
+  .container-faq .item-faq .answer p {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container-faq .item-faq .question {
+    padding: 1.2rem;
+  }
+
+  .container-faq .item-faq .question .more {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 0.7rem;
+  }
+
+  .container-faq .item-faq .question span {
+    font-size: 1.8rem;
+  }
+
+  .container-faq .item-faq .answer {
+    padding: 0 15px;
+  }
+
+>>>>>>> 1822097caa1bc726d926537d3f61a9635f2a6af9
   .container-faq .item-faq .answer p {
     font-size: 1rem;
   }
@@ -136,6 +183,7 @@
 /* actividades de pasadias */
 .important-actividades{
   text-align: center;
+<<<<<<< HEAD
   padding-top: 5rem;
   padding-bottom: 0px;
 }
@@ -158,3 +206,6 @@
 .icono {
   margin-right: 15px; /* Ajusta el valor según necesites */
 }
+=======
+}
+>>>>>>> 1822097caa1bc726d926537d3f61a9635f2a6af9
