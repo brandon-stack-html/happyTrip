@@ -186,6 +186,7 @@
 /* tamaño de el texto */
 .text-helou{
   font-size:20px;  
+  padding: 13px;
 }
 .text-black{
   color: black;
@@ -195,5 +196,39 @@
 .icono {
   margin-right: 15px; /* Ajusta el valor según necesites */
 }
+
+/* boton de adquirir paquete */
+.botonadquirir{
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #333;
+  background-color: whitesmoke;
+  color: #333;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  text-decoration: none; /* Para quitar el subrayado de los enlaces */
+  display: inline-block;
+  font-weight: 700;
+}
+.botonadquirir:hover{
+  background: linear-gradient(to right, rgba(0, 151, 15, 65.718), rgba(0, 321, 0, 138.718));
+  color: #f0f0f0;
+  border-color: #333;
+}
+.divdelboton{
+  text-align: center;
+  padding-bottom: 10rem;
+}
+
+/* color-precios */
+.text-decoration{
+  text-decoration: line-through;
+  color: red;
+}
+.text-decoration2{
+  color: #2ecc71;
+}
+
 
 
