@@ -322,5 +322,14 @@ align-items: center;
   td {
     font-size: 14px;
   }
+
+  /* contac style  */
+  .support-company-area .right-caption .support-caption p{
+    padding-right: 0px;
+  }
+
+  .favourite-place .single-place .place-img img{
+    min-height: 253px;
+  }
   
   
