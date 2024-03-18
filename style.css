@@ -331,5 +331,8 @@ align-items: center;
   .favourite-place .single-place .place-img img{
     min-height: 253px;
   }
+  .color-border{
+    border: 1px solid #666;
+  }
   
   

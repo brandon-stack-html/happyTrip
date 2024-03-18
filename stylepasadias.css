@@ -211,15 +211,7 @@
   display: inline-block;
   font-weight: 700;
 }
-.botonadquirir {
-  /* Estilos por defecto del botón */
-  background: rgba(0, 151, 15, 0.65);
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
+
 
 .botonadquirir:hover {
   /* Estilos al pasar el mouse sobre el botón */
@@ -230,7 +222,7 @@
 
 .divdelboton{
   text-align: center;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 }
 
 /* color-precios */
