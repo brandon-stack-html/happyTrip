@@ -238,6 +238,8 @@ align-items: center;
 .textos-importantes p {
     color: #333333;
     font-size: 1.3rem;
+    text-align: justify;
+    padding-bottom: 3rem;
 }
 .imagen-importante{
 
@@ -281,22 +283,7 @@ align-items: center;
       font-size: 1rem;
     }
   }
-  
-  /* tabla penalidades finaliza */
-  
-  .tabla-penalidades{
     
-    width: 10rem;
-    height: 10rem;
-}
-    
-
-.tabla-penalidades {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.3rem;
-  }
-  
   table {
     width: 100%;
     border-collapse: collapse;
