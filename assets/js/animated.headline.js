@@ -1,27 +1,22 @@
 jQuery(document).ready(function($){
-	//set animation timing
+	var $cdHeadline = $('.cd-headline'),
+		$cdWordsWrapper = $cdHeadline.find('.cd-words-wrapper');
+
 	var animationDelay = 2500,
-		//loading bar effect
 		barAnimationDelay = 3800,
-		barWaiting = barAnimationDelay - 3000, //3000 is the duration of the transition on the loading bar - set in the scss/css file
-		//letters effect
+		barWaiting = barAnimationDelay - 3000,
 		lettersDelay = 50,
-		//type effect
 		typeLettersDelay = 150,
 		selectionDuration = 500,
 		typeAnimationDelay = selectionDuration + 800,
-		//clip effect 
 		revealDuration = 600,
 		revealAnimationDelay = 1500;
-	
+
 	initHeadline();
-	
 
 	function initHeadline() {
-		//insert <i> element for each letter of a changing word
-		singleLetters($('.cd-headline.letters').find('b'));
-		//initialise headline animation
-		animateHeadline($('.cd-headline'));
+		singleLetters($cdHeadline.find('.letters').find('b'));
+		animateHeadline($cdHeadline);
 	}
 
 	function singleLetters($words) {
@@ -29,47 +24,44 @@ jQuery(document).ready(function($){
 			var word = $(this),
 				letters = word.text().split(''),
 				selected = word.hasClass('is-visible');
-			for (i in letters) {
-				if(word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
-				letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>': '<i>' + letters[i] + '</i>';
-			}
+				
+			letters = letters.map(function(letter) {
+				return (selected) ? '<i class="in">' + letter + '</i>': '<i>' + letter + '</i>';
+			});
+
 		    var newLetters = letters.join('');
 		    word.html(newLetters).css('opacity', 1);
 		});
 	}
 
 	function animateHeadline($headlines) {
-		var duration = animationDelay;
 		$headlines.each(function(){
-			var headline = $(this);
+			var $headline = $(this);
 			
-			if(headline.hasClass('loading-bar')) {
-				duration = barAnimationDelay;
-				setTimeout(function(){ headline.find('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
-			} else if (headline.hasClass('clip')){
-				var spanWrapper = headline.find('.cd-words-wrapper'),
-					newWidth = spanWrapper.width() + 10
-				spanWrapper.css('width', newWidth);
-			} else if (!headline.hasClass('type') ) {
-				//assign to .cd-words-wrapper the width of its longest word
-				var words = headline.find('.cd-words-wrapper b'),
-					width = 0;
-				words.each(function(){
+			if($headline.hasClass('loading-bar')) {
+				var duration = barAnimationDelay;
+				setTimeout(function(){ $cdWordsWrapper.addClass('is-loading') }, barWaiting);
+			} else if ($headline.hasClass('clip')){
+				var newWidth = $cdWordsWrapper.width() + 10;
+				$cdWordsWrapper.css('width', newWidth);
+			} else if (!$headline.hasClass('type')) {
+				var width = 0;
+				$cdWordsWrapper.find('b').each(function(){
 					var wordWidth = $(this).width();
 				    if (wordWidth > width) width = wordWidth;
 				});
-				headline.find('.cd-words-wrapper').css('width', width);
-			};
+				$cdWordsWrapper.css('width', width);
+			}
 
-			//trigger animation
-			setTimeout(function(){ hideWord( headline.find('.is-visible').eq(0) ) }, duration);
+			setTimeout(function(){ hideWord( $headline.find('.is-visible').eq(0) ) }, duration);
 		});
 	}
 
 	function hideWord($word) {
 		var nextWord = takeNext($word);
-		
-		if($word.parents('.cd-headline').hasClass('type')) {
+		var headline = $word.parents('.cd-headline');
+
+		if(headline.hasClass('type')) {
 			var parentSpan = $word.parent('.cd-words-wrapper');
 			parentSpan.addClass('selected').removeClass('waiting');	
 			setTimeout(function(){ 
@@ -77,24 +69,20 @@ jQuery(document).ready(function($){
 				$word.removeClass('is-visible').addClass('is-hidden').children('i').removeClass('in').addClass('out');
 			}, selectionDuration);
 			setTimeout(function(){ showWord(nextWord, typeLettersDelay) }, typeAnimationDelay);
-		
-		} else if($word.parents('.cd-headline').hasClass('letters')) {
+		} else if(headline.hasClass('letters')) {
 			var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
 			hideLetter($word.find('i').eq(0), $word, bool, lettersDelay);
 			showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
-
-		}  else if($word.parents('.cd-headline').hasClass('clip')) {
-			$word.parents('.cd-words-wrapper').animate({ width : '2px' }, revealDuration, function(){
+		} else if(headline.hasClass('clip')) {
+			$cdWordsWrapper.animate({ width : '2px' }, revealDuration, function(){
 				switchWord($word, nextWord);
 				showWord(nextWord);
 			});
-
-		} else if ($word.parents('.cd-headline').hasClass('loading-bar')){
-			$word.parents('.cd-words-wrapper').removeClass('is-loading');
+		} else if (headline.hasClass('loading-bar')){
+			$cdWordsWrapper.removeClass('is-loading');
 			switchWord($word, nextWord);
 			setTimeout(function(){ hideWord(nextWord) }, barAnimationDelay);
-			setTimeout(function(){ $word.parents('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
-
+			setTimeout(function(){ $cdWordsWrapper.addClass('is-loading') }, barWaiting);
 		} else {
 			switchWord($word, nextWord);
 			setTimeout(function(){ hideWord(nextWord) }, animationDelay);
@@ -102,12 +90,13 @@ jQuery(document).ready(function($){
 	}
 
 	function showWord($word, $duration) {
-		if($word.parents('.cd-headline').hasClass('type')) {
+		var headline = $word.parents('.cd-headline');
+
+		if(headline.hasClass('type')) {
 			showLetter($word.find('i').eq(0), $word, false, $duration);
 			$word.addClass('is-visible').removeClass('is-hidden');
-
-		}  else if($word.parents('.cd-headline').hasClass('clip')) {
-			$word.parents('.cd-words-wrapper').animate({ 'width' : $word.width() + 10 }, revealDuration, function(){ 
+		} else if(headline.hasClass('clip')) {
+			$cdWordsWrapper.animate({ 'width' : $word.width() + 10 }, revealDuration, function(){ 
 				setTimeout(function(){ hideWord($word) }, revealAnimationDelay); 
 			});
 		}
@@ -122,9 +111,8 @@ jQuery(document).ready(function($){
 		 	setTimeout(function(){ hideWord(takeNext($word)) }, animationDelay);
 		}
 
-		if($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
-			var nextWord = takeNext($word);
-			switchWord($word, nextWord);
+		if($letter.is(':last-child') && !$('html').hasClass('csstransitions')) {
+			switchWord($word, takeNext($word));
 		} 
 	}
 
@@ -134,7 +122,7 @@ jQuery(document).ready(function($){
 		if(!$letter.is(':last-child')) { 
 			setTimeout(function(){ showLetter($letter.next(), $word, $bool, $duration); }, $duration); 
 		} else { 
-			if($word.parents('.cd-headline').hasClass('type')) { setTimeout(function(){ $word.parents('.cd-words-wrapper').addClass('waiting'); }, 200);}
+			if(headline.hasClass('type')) { setTimeout(function(){ $cdWordsWrapper.addClass('waiting'); }, 200);}
 			if(!$bool) { setTimeout(function(){ hideWord($word) }, animationDelay) }
 		}
 	}

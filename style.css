@@ -75,6 +75,9 @@
     font-family: "Roboto", sans-serif;
 text-align: center;
 }
+.arriba{
+    padding: 2rem;
+}
 .opiniones .caja-contenedor .caja .user img {
     border-radius: 50%;
     object-fit: cover;
@@ -240,6 +243,9 @@ align-items: center;
     font-size: 1.3rem;
     text-align: justify;
     padding-bottom: 3rem;
+}
+.textos-importantes li{
+    text-align: justify;
 }
 .imagen-importante{
 
