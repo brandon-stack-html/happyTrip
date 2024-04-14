@@ -53,7 +53,8 @@ $(function() {
             $(form).ajaxSubmit({
                 type: "POST",
                 data: $(form).serialize(),
-                url: "contact_process.php",
+                // Eliminamos la URL a contact_process.php
+                // url: "contact_process.php",
                 success: function() {
                     var $form = $(form);
                     $form.find(':input').prop('disabled', true);
