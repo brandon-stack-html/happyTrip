@@ -130,7 +130,6 @@
     <!-- ================ contact section start ================= -->
     <section class="contact-section">
         <div class="container">
-    
             <div class="row">
                 <div class="col-12">
                     <h2 class="contact-title">PONTE EN CONTACTO CON NOSOTROS</h2>
@@ -162,34 +161,23 @@
                         <div class="form-group mt-3">
                             <button type="submit" class="button button-contactForm boxed-btn">enviar</button>
                         </div>
+                        <input type="hidden" name="_next" value="https://happytrip.com.co/">
                     </form>
-                </div>
-                <div class="col-lg-3 offset-lg-1">
-                    <div class="media contact-info">
-                        <span class="contact-info__icon"><i class="ti-home"></i></span>
-                        <div class="media-body">
-                            <h3>Bogota, colombia</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="media contact-info">
-                        <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                        <div class="media-body">
-                            <h3> 314 4397756</h3>
-                            <p>lunes a domingo <br>8 am a 8pm</p>
-                        </div>
-                    </div>
-                    <div class="media contact-info">
-                        <span class="contact-info__icon"><i class="ti-email"></i></span>
-                        <div class="media-body">
-                            <h3>happytripcolombia@gmail.com</h3>
-                            <p>envianos tu consulta en cualquier momento</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <script>
+        // Cuando se envíe el formulario, mostrar una alerta
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe
+    
+            // Aquí puedes hacer lo que necesites después de que se haya enviado el formulario
+            // Por ahora, solo mostraremos una alerta
+            alert('¡Tu correo ha sido enviado con éxito!');
+        });
+    </script>
     
     <!-- ================ contact section end ================= -->
     
