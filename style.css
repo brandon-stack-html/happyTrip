@@ -329,5 +329,14 @@ align-items: center;
   .color-border{
     border: 1px solid #666;
   }
+  .URL-color {
+    color: rgb(0, 200, 255);
+    transition: color 0.3s; /* Agregamos una transición para suavizar el cambio de color */
+}
+
+/* Cambiamos el color cuando el cursor está sobre la URL */
+.URL-color:hover {
+    color: rgb(255, 0, 0); /* Cambiamos el color a rojo cuando el cursor está sobre la URL */
+}
   
   
