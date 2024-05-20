@@ -1,2 +1,2 @@
 # happyTrip
-proyecto camila
+proyecto HAPPY TRIP (terminado)
