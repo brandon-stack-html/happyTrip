@@ -246,23 +246,93 @@
         </div>
         <!-- Favourite Places End -->
         <!-- Video Start Arera -->
-        <div class="video-area video-bg pt-200 pb-200" data-background="https://live.staticflickr.com/65535/53677078325_78f5ef4be8_k.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="video-container">
-                            <iframe class="video-cap" width="1200" height="500" src="https://www.youtube.com/embed/RfGfLa9KJas?si=wXRWUVziVFuotSAM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                           <div class="video-caption text-center">
-                       
-                            <p class="pera1">en el momento perfecto</p>
-                            <p class="pera2">HappyTrip es un líder mundial en excursiones y tours ecológicos</p>
-                            <p class="pera3"> Plataforma de reserva de excursiones</p>
-                        </div> 
+        <style>
+            .video-area {
+                background-image: url('https://live.staticflickr.com/65535/53677078325_78f5ef4be8_k.jpg');
+                background-size: cover;
+                background-position: center;
+                padding-top: 200px;
+                padding-bottom: 200px;
+            }
+            .video-container {
+                position: relative;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .video-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .play-button:hover {
+                background: rgba(0, 0, 0, 0.8);
+            }
+            .video-caption {
+                text-align: center;
+                color: white;
+                margin-top: 20px;
+            }
+            .pera1, .pera2, .pera3 {
+                margin: 5px 0;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="video-area video-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="video-container" data-video-id="RfGfLa9KJas">
+                        <img src="https://img.youtube.com/vi/RfGfLa9KJas/hqdefault.jpg" alt="Video Thumbnail">
+                        <button class="play-button">Play</button>
                     </div>
+                    <div class="video-caption">
+                        <p class="pera1">en el momento perfecto</p>
+                        <p class="pera2">HappyTrip es un líder mundial en excursiones y tours ecológicos</p>
+                        <p class="pera3">Plataforma de reserva de excursiones</p>
+                    </div> 
                 </div>
             </div>
         </div>
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const videoContainers = document.querySelectorAll('.video-container');
+        videoContainers.forEach(container => {
+            const videoId = container.getAttribute('data-video-id');
+            const playButton = container.querySelector('.play-button');
+            
+            playButton.addEventListener('click', () => {
+                const iframe = document.createElement('iframe');
+                iframe.setAttribute('width', '1200');
+                iframe.setAttribute('height', '500');
+                iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+                iframe.setAttribute('title', 'YouTube video player');
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                iframe.setAttribute('allowfullscreen', 'true');
+                
+                container.innerHTML = '';  // Clear the container
+                container.appendChild(iframe);  // Insert the iframe
+            });
+        });
+    });
+    </script>
         <!-- Video Start End -->
         <!-- Support Company Start-->
         <div class="support-company-area support-padding fix">
@@ -270,7 +340,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-6 col-lg-6">
                         <div class="support-location-img mb-50">
-                            <img src="https://happy-trip.s3.amazonaws.com/Fotos-p%C3%A1gina/Fotos+p%C3%A1gina/Dise%C3%B1o-sin-t%C3%ADtulo-min.webp" alt="imagen nosotros">
+                            <img src="https://happy-trip.s3.amazonaws.com/Fotos-p%C3%A1gina/Fotos+p%C3%A1gina/Dise%C3%B1o-sin-t%C3%ADtulo-min.webp" loading="lazy" alt="imagen nosotros">
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">

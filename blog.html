@@ -132,72 +132,123 @@
      </div>
      <!-- slider Area End-->
     <!--================Blog Area =================-->
-    <section class="blog_area section-padding">
-        <div class="container">
-            <div class="row row-x">
-                <div class="col-lg-8 mb-5 mb-lg-0">
-                    <div class="blog_left_sidebar">
-                        <article class="blog_item">
-                            <div class="video-container">
-                                <iframe width="1200" height="800" src="https://www.youtube.com/embed/vk9FtiagJ2U?si=29ojEykGUP1YsmL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </div>
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .video-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .play-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
 
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="./favorito1.html">
-                                    <h2>JUAN CARLOS</h2>
-                                </a>
-                                <p>
-                                    <i class="fa-solid fa-quote-left"></i>¡HappyTrip hizo de mi viaje una experiencia inolvidable!, todo fue perfecto. Recomiendo sus paquetes de viaje para aventuras auténticas y un servicio excepcional de  ⭐ ⭐ ⭐ ⭐ ⭐ ¡No duden en elegirlos para su próxima aventura! ✈️🌎<i class="fa-solid fa-quote-right"></i>
-                                    </p>
-                                <ul class="blog-info-link">
-                                    <li><i class="fa fa-user"></i> viaje, estilo de vida</li>
-                                </ul>
-                            </div>
-                        </article>
+<section class="blog_area section-padding">
+    <div class="container">
+        <div class="row row-x">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog_left_sidebar">
 
-                        <article class="blog_item">
-                            <div class="video-container">
-                                <iframe width="1200" height="500" src="https://www.youtube.com/embed/qPswYqej2l0?si=GvJA6Sh8c_2oBuj_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </div>
+                    <article class="blog_item">
+                        <div class="video-container" data-video-id="vk9FtiagJ2U">
+                            <img src="https://img.youtube.com/vi/vk9FtiagJ2U/hqdefault.jpg" alt="Video Thumbnail">
+                            <button class="play-button">Play</button>
+                        </div>
+                        <div class="blog_details">
+                            <a class="d-inline-block" href="./favorito1.html">
+                                <h2>JUAN CARLOS</h2>
+                            </a>
+                            <p>
+                                <i class="fa-solid fa-quote-left"></i>¡HappyTrip hizo de mi viaje una experiencia inolvidable!, todo fue perfecto. Recomiendo sus paquetes de viaje para aventuras auténticas y un servicio excepcional de  ⭐ ⭐ ⭐ ⭐ ⭐ ¡No duden en elegirlos para su próxima aventura! ✈️🌎<i class="fa-solid fa-quote-right"></i>
+                            </p>
+                            <ul class="blog-info-link">
+                                <li><i class="fa fa-user"></i> viaje, estilo de vida</li>
+                            </ul>
+                        </div>
+                    </article>
 
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="./favorito2.html">
-                                    <h2>MARIA FERNANDA</h2>
-                                </a>
-                                <p>
-                                    <i class="fa-solid fa-quote-left"></i>¡HappyTrip me brindo un excelente servicio! 🌴🌞 Recomiendo sus servicios para conocer las mejores maravillas de colombia, y algo que me encanto demasiado fue que pude llevar a mi perrito bruno, es mi mejor amigo y siempre que salgo para algun lugar lo llevo por lo que tambien menciono a la mejor guia del viaje mistic la cual es una perrita muy hermosa y con la que bruno se llevo bien🐩🐶<i class="fa-solid fa-quote-right"></i></p>
-                                <ul class="blog-info-link">
-                                    <li><i class="fa fa-user"></i> viaje, estilo de vida</li>
-                                </ul>
-                            </div>
-                        </article>
+                    <article class="blog_item">
+                        <div class="video-container" data-video-id="qPswYqej2l0">
+                            <img src="https://img.youtube.com/vi/qPswYqej2l0/hqdefault.jpg" alt="Video Thumbnail">
+                            <button class="play-button">Play</button>
+                        </div>
+                        <div class="blog_details">
+                            <a class="d-inline-block" href="./favorito2.html">
+                                <h2>MARIA FERNANDA</h2>
+                            </a>
+                            <p>
+                                <i class="fa-solid fa-quote-left"></i>¡HappyTrip me brindo un excelente servicio! 🌴🌞 Recomiendo sus servicios para conocer las mejores maravillas de colombia, y algo que me encanto demasiado fue que pude llevar a mi perrito bruno, es mi mejor amigo y siempre que salgo para algun lugar lo llevo por lo que tambien menciono a la mejor guia del viaje mistic la cual es una perrita muy hermosa y con la que bruno se llevo bien🐩🐶<i class="fa-solid fa-quote-right"></i></p>
+                            <ul class="blog-info-link">
+                                <li><i class="fa fa-user"></i> viaje, estilo de vida</li>
+                            </ul>
+                        </div>
+                    </article>
 
-                        <article class="blog_item">
-                            <div class="video-container">
-                                <iframe width="1200" height="500" src="https://www.youtube.com/embed/Lbh-Mr1P460?si=q0lydN04skOATavi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </div>
+                    <article class="blog_item">
+                        <div class="video-container" data-video-id="Lbh-Mr1P460">
+                            <img src="https://img.youtube.com/vi/Lbh-Mr1P460/hqdefault.jpg" alt="Video Thumbnail">
+                            <button class="play-button">Play</button>
+                        </div>
+                        <div class="blog_details">
+                            <a class="d-inline-block" href="./favorito3.html">
+                                <h2>LUIS MIGUEL</h2>
+                            </a>
+                            <p>¡HappyTrip supero todas mis expectativas y convirtio una simple escapada de la ciudad a otro nivel,  🌿🌻 Desde el comienzo de las actividades me senti emocionado por todo lo que hicimos ese dia, Recomiendo sus servicios por si quieres cambiar un poco la rutina.🍄🌾🌞</p>
+                            <ul class="blog-info-link">
+                                <li><i class="fa fa-user"></i> viaje, estilo de vida</li>
+                            </ul>
+                        </div>
+                    </article>
 
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="./favorito3.html">
-                                    <h2>LUIS MIGUEL</h2>
-                                </a>
-                                <p>¡HappyTrip supero todas mis expectativas y convirtio una simple escapada de la ciudad a otro nivel,  🌿🌻 Desde el comienzo de las actividades me senti emocionado por todo lo que hicimos ese dia, Recomiendo sus servicios por si quieres cambiar un poco la rutina.🍄🌾🌞</p>
-                                <ul class="blog-info-link">
-                                    <li><i class="fa fa-user"></i> viaje, estilo de vida</li>
-                                </ul>
-                            </div>
-                        </article>
-
-
-                        
-                    </div>
-                </div>
-                
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const videoContainers = document.querySelectorAll('.video-container');
+    videoContainers.forEach(container => {
+        const videoId = container.getAttribute('data-video-id');
+        const playButton = container.querySelector('.play-button');
+        
+        playButton.addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.setAttribute('width', '1200');
+            iframe.setAttribute('height', '800');
+            iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+            iframe.setAttribute('title', 'YouTube video player');
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+            iframe.setAttribute('allowfullscreen', 'true');
+            
+            container.innerHTML = '';  // Clear the container
+            container.appendChild(iframe);  // Insert the iframe
+        });
+    });
+});
+</script>
     <!--================Blog Area =================-->
     <footer>
         <!-- Footer Start-->
